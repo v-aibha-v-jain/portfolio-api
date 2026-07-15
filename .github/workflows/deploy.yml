@@ -29,9 +29,9 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1
-        
+
     - name: Deploy Artifact to AWS Lambda
       run: |
         aws lambda update-function-code \
-          --function-name vaibhav-jain-portfolio-api \
+          --function-name portfolio-backend-api \
           --zip-file fileb://target/portfolio-0.0.1-SNAPSHOT.jar
